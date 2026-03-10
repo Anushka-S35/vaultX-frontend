@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SafePass Vault - Sign Up</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="signup">
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="brand">
+      <img src="logo.jpeg" alt="SafePass Logo" class="logo">
+  <span class="brand-text">VaultX</span>
+    </div>
+    <div class="nav-links">
+      <a href="about.html">About</a>
+      <a href="login.html" class="btn small">Login</a>
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <main class="container centered">
+    <div class="card signup-card">
+      <h2>Create your account</h2>
+      <p class="muted">Securely store and retrieve your site passwords. Remember only one master password.</p>
+
+      <form id="signup-form" class="form">
+        <label>Full name</label>
+        <input id="signup_name" type="text" placeholder="Your name" required>
+
+        <label>Email</label>
+        <input id="signup_email" type="email" placeholder="you@college.edu" required>
+
+        <label>Master password</label>
+        <input id="signup_password" type="password" placeholder="Create master password" required>
+
+        <label>Confirm password</label>
+        <input id="signup_confirm" type="password" placeholder="Confirm password" required>
+
+        <button id="signup_btn" class="btn primary" type="submit">Create account</button>
+      </form>
+
+      <p class="small muted">Already have an account? <a href="login.html">Login here</a></p>
+    </div>
+  </main>
+
+  <script src="script.js" defer></script>
+  <!--<script src="/Users/anushkashelke/vault_password/statics" defer></script>-->
+</body>
+</html>

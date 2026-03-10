@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SafePass Vault - Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="home">
+
+  <nav class="navbar">
+    <div class="brand">
+      
+  <img src="logo.jpeg" alt="SafePass Logo" class="logo">
+  <span class="brand-text">VaultX</span>
+
+    </div>
+    <div class="nav-links">
+      <a href="profile.html"><i class="fas fa-user-circle"></i> Profile</a>
+      <a href="about.html">About</a>
+      <button id="logoutBtn" class="btn small danger">Logout</button>
+    </div>
+  </nav>
+
+  <main class="container grid-2">
+    <!-- Left: Add entry -->
+    <section class="card">
+      <h3>Add credential</h3>
+      <form id="entry-form" class="form">
+        <label>Website / App name</label>
+        <input id="site_name" type="text" placeholder="eg: Gmail / Flipkart" required>
+
+        <label>Username / Email</label>
+        <input id="site_user" type="text" placeholder="eg: you@mail.com" required>
+
+        <label>Password</label>
+        <div class="row">
+          <input id="site_pass" type="text" placeholder="Type the password (it will be encrypted)">
+          <button id="generateBtn" class="btn small">Generate</button>
+        </div>
+
+        <div class="actions">
+          <button id="saveEntryBtn" class="btn primary">Save to Vault</button>
+        </div>
+      </form>
+
+      <p class="muted small">Passwords are stored locally for this demo.</p>
+    </section>
+
+    <!-- Right: Table -->
+    <section class="card">
+      <h3>Saved credentials</h3>
+      <div class="table-wrap">
+        <table id="vaultTable" class="table">
+          <thead>
+            <tr>
+              <th>Website</th>
+              <th>Username</th>
+              <th>Password</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Rows inserted by JS -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+ <script src="script.js" defer></script>
+  <!--<script src="/Users/anushkashelke/vault_password/statics/style.css" defer></script> --> 
+</body>
+</html>

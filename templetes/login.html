@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SafePass Vault - Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="login">
+
+  <nav class="navbar">
+    <div class="brand">
+     <img src="logo.jpeg" alt="SafePass Logo" class="logo">
+  <span class="brand-text">VaultX</span>
+    </div>
+    <div class="nav-links">
+      <a href="about.html">About</a>
+      <a href="signup.html" class="btn small">Sign Up</a>
+    </div>
+  </nav>
+
+  <main class="container centered">
+    <div class="card login-card">
+      <h2>Welcome back</h2>
+      <p class="muted">Enter your email and master password to unlock your vault.</p>
+
+      <form id="login-form" class="form">
+        <label>Email</label>
+        <input id="login_email" type="email" placeholder="you@college.edu" required>
+
+        <label>Master password</label>
+        <input id="login_password" type="password" placeholder="Master password" required>
+
+        <button id="login_btn" class="btn primary" type="submit">Login</button>
+      </form>
+
+      <p class="small muted">New user? <a href="signup.html">Create an account</a></p>
+    </div>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

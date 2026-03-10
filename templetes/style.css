@@ -1,0 +1,131 @@
+/* style.css - shared styles for all pages */
+
+/* -- variables -- */
+:root{
+  --bg:#0f1724;           /* deep navy */
+  --card:#0f2130;         /* dark card */
+  --accent:#00d4ff;       /* cyan */
+  --muted:#9fb2c9;
+  --white:#eef6ff;
+  --danger:#ff6b6b;
+  --glass: rgba(255,255,255,0.03);
+  --radius:12px;
+  --shadow: 0 6px 18px rgba(3,9,23,0.6);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Basic reset */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  background: linear-gradient(180deg, #08101a 0%, #071822 60%);
+  color:var(--white);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  font-size:16px;
+  line-height:1.4;
+}
+
+/* Container */
+.container{
+  max-width:1100px;
+  margin:32px auto;
+  padding:16px;
+}
+
+/* center layout for auth pages */
+.centered{display:flex;align-items:center;justify-content:center;min-height:70vh}
+
+/* grid for dashboard */
+.grid-2{
+  display:grid;
+  gap:18px;
+  grid-template-columns: 380px 1fr;
+}
+
+/* Card */
+.card{
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius:var(--radius);
+  padding:20px;
+  box-shadow:var(--shadow);
+  border:1px solid rgba(255,255,255,0.03);
+}
+
+/* Navbar */
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 24px;
+  background:transparent;
+  max-width:1100px;margin:14px auto;border-radius:10px;
+}
+
+.logo {
+  height: 50px;        /* adjust size */
+  width: auto;         /* keep proportions */
+  margin-right: 10px;  /* spacing between logo and text */
+  vertical-align: middle;
+}
+.brand {
+  display: flex;
+  align-items: center;
+}
+.brand-text {
+  font-weight: 600;
+  font-size: 30px;
+  color: hsl(190, 94%, 50%);
+}
+
+.brand{display:flex;align-items:center;gap:12px;font-weight:600;font-size:18px;color:var(--accent)}
+.brand .fas{font-size:22px}
+.nav-links a{color:var(--muted);margin-left:12px;text-decoration:none}
+.nav-links .btn{margin-left:12px}
+
+/* Buttons */
+.btn{
+  display:inline-block;padding:8px 12px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--white);cursor:pointer;
+}
+.btn.small{padding:6px 10px;font-size:14px}
+.btn.primary{background:linear-gradient(90deg,var(--accent),#00ffa3);color:#032; border:none}
+.btn.danger{background:var(--danger);border:none;color:#fff}
+.btn:hover{transform:translateY(-2px);transition:all .14s ease}
+
+/* Forms */
+.form{display:flex;flex-direction:column;gap:10px;margin-top:10px}
+.form label{font-size:13px;color:var(--muted);margin-bottom:6px}
+.form input[type="text"], .form input[type="email"], .form input[type="password"]{
+  padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--white);
+  outline:none;
+}
+.row{display:flex;gap:8px;align-items:center}
+.row input{flex:1}
+
+/* Small text */
+.muted{color:var(--muted)}
+.small{font-size:13px}
+
+/* Table */
+.table-wrap{overflow:auto}
+.table{width:100%;border-collapse:collapse;margin-top:10px}
+.table th, .table td{padding:10px;text-align:left;border-bottom:1px solid rgba(255,255,255,0.03);font-size:14px}
+.table tbody tr:hover{background:rgba(255,255,255,0.02)}
+.table th{color:var(--muted);font-weight:600}
+
+/* form actions */
+.actions{display:flex;gap:8px;margin-top:8px;}
+
+/* cards for auth */
+.signup-card, .login-card, .profile-card{width:420px}
+.profile-card .muted{margin-bottom:10px}
+
+/* utility */
+.center{display:flex;justify-content:center;align-items:center}
+.icon{color:var(--muted);margin-right:8px;}
+
+/* responsive */
+@media (max-width:900px){
+  .grid-2{grid-template-columns:1fr}
+  .container{padding:8px}
+}
