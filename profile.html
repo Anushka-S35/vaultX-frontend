@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SafePass Vault - Profile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="profile">
+
+  <nav class="navbar">
+    <div class="brand">
+      <img src="logo.jpeg" alt="SafePass Logo" class="logo">
+  <span class="brand-text">VaultX</span>
+    </div>
+    <div class="nav-links">
+      <a href="home.html">Dashboard</a>
+      <a href="about.html">About</a>
+      <button id="logoutBtn2" class="btn small danger">Logout</button>
+    </div>
+  </nav>
+
+  <main class="container centered">
+    <div class="card profile-card">
+      <h2>Profile</h2>
+      <p id="profile_name" class="muted"></p>
+      <p id="profile_email" class="muted"></p>
+
+      <hr>
+
+      <h3>Change Master Password</h3>
+      <form id="change-pass-form" class="form">
+        <label>Current master password</label>
+        <input id="old_master" type="password" required>
+
+        <label>New master password</label>
+        <input id="new_master" type="password" required>
+
+        <label>Confirm new</label>
+        <input id="new_confirm" type="password" required>
+
+        <div class="actions">
+          <button id="changePassBtn" class="btn primary">Change password</button>
+        </div>
+      </form>
+
+      <p class="muted small">Changing master password re-encrypts all your saved entries. (Demo feature)</p>
+    </div>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
